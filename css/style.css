@@ -6,14 +6,27 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body:has(#one:hover) .main__go {
+  background-color: #ffffff;
+}
+
 body:has(#in:checked) #two {
   visibility: visible;
   background-color: aquamarine;
-  animation-name: go;
+  animation-name: rotate;
   animation-duration: 1s;
 }
 
-main {
+body:has(#one:hover) #post {
+  margin: 10px auto;
+  background-color: rgba(0, 0, 0, 0.9529411765);
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+}
+.main__go {
   width: 100%;
   height: 100vh;
   padding: 0;
@@ -23,7 +36,7 @@ main {
   align-items: center;
   margin: 0 auto;
 }
-main .button {
+.main__go-button {
   padding: 5px 30px;
   background-color: rgb(255, 255, 255);
   color: #00ff1a;
@@ -32,12 +45,12 @@ main .button {
   border-radius: 50%;
   transition: 0.5s linear;
 }
-main .button:hover {
+.main__go-button:hover {
   background-color: #000000;
   color: #fff;
   border: 30px solid white;
 }
-main .button #in {
+.main__go-button-checkbox {
   position: absolute;
   width: 0px;
   height: 0px;
@@ -46,12 +59,12 @@ main .button #in {
   background: #000;
   border: none;
 }
-main .button .paragraph {
+.main__go-button-paragraph {
   font-size: 30px;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
 }
-main .action {
+.main__action {
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +80,7 @@ main .action {
   font-size: 50px;
   visibility: hidden;
 }
-main .action__nav {
+.main__action-nav {
   top: 0;
   left: 0;
   width: 100%;
@@ -75,7 +88,7 @@ main .action__nav {
   margin: 0;
   display: flex;
 }
-main .action__nav-head_one {
+.main__action-nav-one {
   top: 50px;
   left: 50px;
   width: 20%;
@@ -88,17 +101,19 @@ main .action__nav-head_one {
   color: #ffffff;
   background-color: #000000;
   transition: 1s;
+  text-decoration: none;
 }
-main .action__nav-head_one:hover {
+.main__action-nav-one:hover {
   width: 100%;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1612810806563-4cb8265db55f?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 50vh;
+  background-image: url("https://images.unsplash.com/photo-1578148190071-173c57e882bd?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0% 80%;
   color: transparent;
+  border-radius: 0 0 20px 20px;
 }
-main .action__nav-head_two {
+.main__action-nav-two {
   top: 50px;
   left: 50px;
   width: 20%;
@@ -111,17 +126,19 @@ main .action__nav-head_two {
   color: #ffffff;
   background-color: #000000;
   transition: 1s;
+  text-decoration: none;
 }
-main .action__nav-head_two:hover {
+.main__action-nav-two:hover {
   width: 100%;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1612810806563-4cb8265db55f?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 50vh;
+  background-image: url("https://images.unsplash.com/photo-1596321687344-547d323f094a?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0% 80%;
   color: transparent;
+  border-radius: 0 0 20px 20px;
 }
-main .action__nav-head_three {
+.main__action-nav-three {
   top: 50px;
   left: 50px;
   width: 20%;
@@ -134,17 +151,19 @@ main .action__nav-head_three {
   color: #ffffff;
   background-color: #000000;
   transition: 1s;
+  text-decoration: none;
 }
-main .action__nav-head_three:hover {
+.main__action-nav-three:hover {
   width: 100%;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1612810806563-4cb8265db55f?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 50vh;
+  background-image: url("https://www.mbusa.com/content/dam/mb-nafta/us/myco/my21/bodystyles/suv/XXL-BODYSTYLELANDING-SUV-GLC.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 55%;
   color: transparent;
+  border-radius: 0 0 20px 20px;
 }
-main .action__nav-head_four {
+.main__action-nav-four {
   top: 50px;
   left: 50px;
   width: 20%;
@@ -157,17 +176,19 @@ main .action__nav-head_four {
   color: #ffffff;
   background-color: #000000;
   transition: 1s;
+  text-decoration: none;
 }
-main .action__nav-head_four:hover {
+.main__action-nav-four:hover {
   width: 100%;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1612810806563-4cb8265db55f?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 50vh;
+  background-image: url("https://images.unsplash.com/photo-1702543180823-9722d8f76cc3?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: transparent;
+  border-radius: 0 0 20px 20px;
 }
-main .action__nav-head_five {
+.main__action-nav-five {
   top: 50px;
   left: 50px;
   width: 20%;
@@ -180,42 +201,48 @@ main .action__nav-head_five {
   color: #ffffff;
   background-color: #000000;
   transition: 1s;
+  text-decoration: none;
 }
-main .action__nav-head_five:hover {
+.main__action-nav-five:hover {
   width: 100%;
-  height: 90vh;
-  background-image: url("https://images.unsplash.com/photo-1612810806563-4cb8265db55f?q=80&w=1527&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 50vh;
+  background-image: url("https://www.mbusa.com/content/dam/mb-nafta/us/myco/my23/c/cabriolet/class-page/series/2023-C-CABRIOLET-HERO-DR.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 77%;
   color: transparent;
+  border-radius: 0 0 20px 20px;
 }
-main .action .post {
+.main__action-post {
   text-align: center;
   width: 85%;
   background-color: rgba(0, 0, 0, 0.3882352941);
-  margin: 8% auto;
-  padding: 15px 0;
+  margin: 50px auto;
+  padding: 5px 20px;
   border-radius: 15px;
+  transition: 0.5s;
 }
-main .action .post h2 {
+.main__action-post-head {
   text-align: center;
+  padding: 0;
+  margin: 20px auto 5px;
   font-size: 55px;
   font-weight: 600;
   color: #fff;
+  text-decoration: none;
 }
-main .action .post p {
+.main__action-post-paragraph {
   text-align: center;
   font-size: 30px;
   font-weight: 600;
   color: #fff;
 }
 
-@keyframes go {
+@keyframes rotate {
   from {
-    transform: scale(1.5);
+    transform: rotate(180deg);
   }
   to {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
 }/*# sourceMappingURL=style.css.map */
