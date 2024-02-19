@@ -35,6 +35,7 @@ body:has(#one:hover) #post {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  transition: 0.5s ease-out;
 }
 .main__go-button {
   padding: 5px 30px;
